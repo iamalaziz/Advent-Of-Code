@@ -14,7 +14,7 @@ console.log(dir);
 console.log(floor);
 */
 
-// PART I ---------------------------
+// PART II ---------------------------
 
 for (let i = 0; i < dir.length; i++) {
   dir[i] === "(" ? (floor += 1) : (floor -= 1);
