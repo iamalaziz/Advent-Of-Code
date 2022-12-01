@@ -1,3 +1,4 @@
+/* Getting input data from local txt file */
 const { readFileSync } = require("fs");
 
 function syncReadFile() {
@@ -10,15 +11,22 @@ function syncReadFile() {
 
 const input = syncReadFile();
 // const input = ["100", "200", "300", "", "400", "500", "", "200", "100", "100"];
-let sum = 0;
-let the_highest_calories = 0;
 
-input.forEach((i) => {
-  if (i !== "") {
-    sum += Number(i);
-  } else {
-    sum > the_highest_calories && (the_highest_calories = sum);
-    sum = 0;
-  }
-});
-console.log(the_highest_calories);
+function getHighestCalories() {
+  let sum = 0;
+  let the_highest_calories = 0;
+
+  input.forEach((i) => {
+    if (i !== "") {
+      sum += Number(i);
+    } else {
+      sum > the_highest_calories && (the_highest_calories = sum);
+      sum = 0;
+    }
+  });
+  console.log(the_highest_calories);
+}
+
+getHighestCalories();
+
+module.exports = { input };
