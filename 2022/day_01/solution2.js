@@ -19,4 +19,5 @@ const sumOfThreeHighest = () => {
   const result = sortedArray[0] + sortedArray[1] + sortedArray[2];
   console.log(result);
 };
+
 sumOfThreeHighest();
