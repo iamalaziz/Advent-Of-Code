@@ -8,4 +8,10 @@ function syncReadFile() {
   return arr;
 }
 
-const rawMoves = syncReadFile();
+const input = syncReadFile();
+console.log(input);
+
+for (let i = 0; i < input.length; i++) {
+  
+}
+
